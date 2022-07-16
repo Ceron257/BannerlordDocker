@@ -19,7 +19,7 @@ You will have to either install the game in the container using SteamCMD, or you
 
 The game has to initialize Steam API otherwise it won't start. It's difficult to notice this in the container, as the process will try to show a message box which you can't see because there's no GUI for the container. The easiest way I found was to mount the folder where steam is installed on my host (have your crendentials saved) into the container. You can then start steam.exe in the container and steam will automatically login. On your host you might see a message telling your something is ready to stream. That's the sign that steam started and logged in successfully in the container.
 
-If you want to start the game without a GPU (this is needed for example on Windows 10 as there's no GPU pass-through possible) you'll have to detour the DXGI API to enable the game to start without a graphics card. See [DXGIdetour/README.md](DXGIdetour/README.md) for instructions to build `dxgidetour.dll`.
+If you want to start the game without a GPU (this is needed for example on Windows 10 as there's no GPU pass-through possible) you'll have to detour the DXGI API to enable the game to start without a graphics card. See [DXGIdetour](DXGIdetour) for instructions to build `dxgidetour.dll`.
 
 To start the game without a GPU you'll need `withdll.exe` from [detours](https://github.com/microsoft/detours) and `dxgidetour.dll`.
 
